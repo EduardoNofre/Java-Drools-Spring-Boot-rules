@@ -1,0 +1,30 @@
+package rules
+
+import com.br.drools.model.PessoaModel;
+
+rule "Se for Eduardo"
+	when 
+		PessoaObject: PessoaModel(nome=="Eduardo" || nome=="EDUARDO" )
+	then
+		PessoaObject.setNome("Eduardo nofre");
+		PessoaObject.setIdade(40);
+		PessoaObject.setDocCpf("5555555555");
+	end
+	
+rule "Se for Dan"
+	when 
+		PessoaObject: PessoaModel(nome=="Dan")
+	then
+		PessoaObject.setNome("Dan Emanoel");
+		PessoaObject.setIdade(22);
+		PessoaObject.setDocCpf("22288644511");
+	end
+
+rule "Se for Aquino"
+	when 
+		PessoaObject: PessoaModel(nome=="Aquino")
+	then
+		PessoaObject.setNome("Marcos Aquino");
+		PessoaObject.setIdade(22);
+		PessoaObject.setDocCpf("8888888888");
+	end

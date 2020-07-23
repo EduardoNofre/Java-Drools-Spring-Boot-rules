@@ -1,0 +1,27 @@
+package rules
+
+import com.br.drools.model.CarroModel;
+
+rule "Se for Versa"
+	when 
+		CarroObject: CarroModel(modelo=="Versa")
+	then
+		CarroObject.setMarca("Nissan");
+		CarroObject.setAno(2020);
+	end
+	
+rule "Se for Gol"
+	when 
+		CarroObject: CarroModel(modelo=="Gol")
+	then
+		CarroObject.setMarca("Volkswagen");
+		CarroObject.setAno(2018);
+	end
+	
+rule "Se for Palio"
+	when 
+		CarroObject: CarroModel(modelo=="Palio")
+	then
+		CarroObject.setMarca("Fiat");
+		CarroObject.setAno(2002);
+	end
